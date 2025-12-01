@@ -1,0 +1,11 @@
+pyautogui
+pandas
+openpyxl
+playwright
+docx
+datetime
+numpy
+copy
+Flask and render_template
+pptx
+tkinter

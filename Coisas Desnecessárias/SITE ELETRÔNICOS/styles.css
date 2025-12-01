@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 600px;
+    gap: 100px;
+    z-index: 2;
+}
+
+header img {
+    width: 250px;
+}
+
+header nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+section {
+    background-image: radial-gradient(#000, #fff);
+    height: 100vh;
+    position: relative;
+}
+
+section .list {
+    width: 70vw;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+/* TAMANHO EXCLUSIVO DO IPHONE */
+.iphone-img {
+    width: 30%;
+    max-width: 300px;
+}
+
+.iphone-img img {
+    width: 100%;
+    height: auto;
+    transform: rotate(0deg);
+}
+
+section .list .item {
+    position: absolute;
+    inset: 0;
+}
+
+section .list .item .ele-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+}
+
+section .list .item .ele-img img {
+    width: 100%;
+    transform: rotate(-30deg);
+}
+
+section .list::before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+    top: 150%;
+    left: 50px;
+    border-radius: 50%;
+    filter: blur(50px);
+}
+
+section .list .item .content {
+    position: absolute;
+    right: 100px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 20px;
+}
+
+section .list .item .content .ele-information {
+    font-weight: bold;
+}
+
+section .list .item .content h2 {
+    font-size: 8em;
+    line-height: 1em;
+    font-family: "League Gothic", sans-serif;
+}
+
+section .list .item .content .description {
+    color: #000;
+    font-size: 12px;
+    text-align: right;
+    max-width: 400px;
+}
+
+section .list .item .content .information {
+    border-radius: 30px;
+    height: 35px;
+    width: 120px;
+    text-transform: uppercase;
+    border: 2px solid #000;
+    background-color: #beff1b;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "League Gothic", sans-serif;
+}
+
+section .list {
+    --calculation: 1;
+}
+
+section .list .item {
+    transform: translateX(calc(100vw * var(--calculation)));
+    transition: 0.5s;
+    opacity: 0;
+}
+
+section .list .item .ele-img img {
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+
+section .list .item .content * {
+    transform: translateX(calc(200px * var(--calculation)));
+    transition: 0.7s;
+    transition-delay: 0.3s;
+    opacity: 0;
+}
+
+section .list .active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+section .list .active .ele-img img {
+    transform: rotate(-20deg);
+}
+
+section .list .active .content * {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.arrows {
+    width: 70vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrows button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.arrows button img {
+    width: 30px;
+    margin-top: 4px;
+}
+
+.arrows button:nth-child(1) img {
+    transform: scale(-1);
+}
+
+.arrows button:hover {
+    background-color: #beff1b;
+}
+
+.indicators {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 15px;
+}
+
+.indicators .number {
+    font-size: 5em;
+    font-family: "League Gothic", sans-serif;
+}
+
+.indicators ul {
+    display: flex;
+    gap: 10px;
+}
+
+.indicators ul li {
+    width: 50px;
+    height: 5px;
+    background-color: #beff1b;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.indicators ul .active {
+    background-color: #000;
+}

@@ -1,0 +1,59 @@
+### TIPOS DE DADOS :
+
+Booleano = True / False
+Inteiro = 10
+Flutuante = 10.5
+Palavra = 'Python'
+Lista = ['Valor1', 'Valor2']
+Dicionáro = {Chave:Valor1, Chave2:Valor2}
+Tupla = ('Valor1''Valor2')
+
+### OPERADORES NUMÉRICOS
+
+Adição = +
+Subtração = -
+Multiplicação = *
+Divisão = /
+Exponenciação = **
+Resto = %
+Divisão de Chão = //
+
+### OPERADORES BOOLEANOS
+
+And = e
+Or = ou
+Not = negação(não)
+
+### OPERADORES COMPARAÇÃO
+
+Igual = ==
+Diferente = !=
+Maior = >
+Menor = <
+Maior ou  Igual = >=
+Menor ou Igual = <=
+
+### CARACTERES ESPECIAIS
+
+Comentário = # 
+Nova Linha = \n
+Inserir Caractere de Escape = \<char>
+
+
+
+###  OPERAÇÕES COM PRINT
+
+print(10-5*2)
+>>>0
+
+print((10-5)*2)
+>>>10
+
+print(10**2*2)
+>>>200
+
+print(10**(2*2))
+>>>10000
+
+print(10 / 2*4)
+>>>20.0
