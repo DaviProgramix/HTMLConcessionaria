@@ -11,9 +11,9 @@ def pegar_cotacoes():
     cotacao_btc = requisicao_dic['BTCBRL']['bid']
 
     texto = f'''
-    Dólar: {cotacao_dolar}
-    Euro: {cotacao_euro}
-    BTC: {cotacao_btc}'''
+    Dólar:  {cotacao_dolar}
+    Euro:  {cotacao_euro}
+    BTC:  {cotacao_btc}'''
 
     texto_cotacoes["text"] = texto
 
@@ -27,7 +27,19 @@ texto_orientacao.grid(column=0, row=0, padx=10, pady=10)
 botao = Button(janela, text="Buscar cotações : Dolares/Euros/Bitcoins", command=pegar_cotacoes)
 botao.grid(column=0, row=1, padx=10, pady=10)
 
-texto_cotacoes = Label(janela, text="Click onde a seta mande : ↑↑↑")
+texto_cotacoes = Label(janela, text="Clique no Local Indicado: ")
 texto_cotacoes.grid(column=0, row=2, padx=10, pady=10)
+
+texto_cotacoes2 = Label(janela, text="Carregando Mensagem...")
+texto_cotacoes2.grid(column=0, row=3, padx=10, pady=10)
+
+texto_cotacoes2 = Label(janela, text="202 Mensagem Encontrada")
+texto_cotacoes2.grid(column=0, row=4, padx=10, pady=10)
+
+texto_cotacoes2 = Label(janela, text="Tá Fechado com os cara que tão na Maldade??")
+texto_cotacoes2.grid(column=0, row=5, padx=10, pady=10)
+
+texto_cotacoes2 = Label(janela, text="Os cara ta no telhado, quer pegar minha Makita")
+texto_cotacoes2.grid(column=0, row=6, padx=10, pady=10)
 
 janela.mainloop()

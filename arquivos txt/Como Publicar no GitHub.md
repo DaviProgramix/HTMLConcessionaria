@@ -1,6 +1,6 @@
 # Publicar Projeto no GitHub
 
-\F:
+\f:\DaLucas_Codes\Coisas Desnecessárias\Sites\DevClub Store
 cd ""
 git init
 git add .
